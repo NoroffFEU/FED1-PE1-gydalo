@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <title>HotView Labs | Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="/scripts/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -16,17 +17,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <header>
-<img src="/images/logotrans.png" alt="Logo">
+<img src="images/logotrans.png" alt="Logo">
 <div class="nav-links-header">
-<a href="/account/login.html">Login</a>
-<a href="/account/register.html">Register</a>
+<a href="account/login.html">Login</a>
+<a href="account/register.html">Register</a>
 </div>
 </header>
 <body>
+<div class="background">
 <div class="background-image-homepage">
 <h1 class="hotview">HotView</h1>
 <h1 class="labs">LABS</h1>
 </div>
-<h2>Blog Posts</h2>
+<section aria-label="Newest Blog Posts">
+    <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+    <ul data-slides>
+        <li class="slide" data-active>
+            <img src="images/robot.webp" alt="Image of a robot">
+        </li>
+        <li class="slide">
+            <img src="images/transparentphone.webp" alt="Image of a transparent phone">
+        </li>
+        <li class="slide">
+            <img src="images/watch.webp" alt="Image of a watch">
+        </li>
+    </ul>
+</div>
+</section>
+<h2 class="text-blog-posts">Blog Posts</h2>
+<div class="container-posts-homepage">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+<img src="images/car.webp" alt="">
+</div>
 </body>
 </html>
