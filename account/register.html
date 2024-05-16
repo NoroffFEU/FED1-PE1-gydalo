@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HotView Labs | Register</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <script type="module" src="/scripts/script.mjs"></script>
+    <script type="module" src="/scripts/api/auth/register.mjs"></script>
     <script type="module" src="/account/register.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +21,8 @@
 <header>
 <a href="/index.html"><img src="/images/logotrans.png" alt="Logo"></a>
 <div class="nav-links-header">
-<a href="/account/login.html">Login</a>
-<a href="/account/register.html">Register</a>
+    <a href="/account/login.html">Login</a>
+    <a href="/account/register.html">Register</a>
 </div>
 </header>
 <body>
@@ -29,15 +31,15 @@
         <h1>HotView <br>LABS</h1>
     <div class="form">
         <h2>REGISTER ACCOUNT</h2>
-    <form id="register-form">
+    <form id="registerForm">
         <div class="input-group">
-        <input type="text" id="name" value="tester999" class="form-input" placeholder="Name"/>
+        <input class="form-control" type="text" id="name" class="form-input" name="name" placeholder="Name" required pattern="^[\w]+$" title="Username must contain only lowercase and uppercase letters, numbers and underscore ( _ ). Example: Username_123" maxLength="20"/>
         </div>
         <div class="input-group">
-        <input type="email" id="email" value="tester999@stud.noroff.no" class="form-input" placeholder="Email"/>
+        <input class="form-control" type="email" id="email" class="form-input" name="email" placeholder="Email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed to register."/>
         </div>
         <div class="input-group">
-        <input type="password" id="password" value="password123" class="form-input" placeholder="Password"/>
+        <input class="form-control" type="password" id="password" class="form-input" name="password" placeholder="Password" minLength="8" required/>
        </div>
     <p>Already have an account?</p>
     <a href="/account/login.html">Login here</a> <br> <br>

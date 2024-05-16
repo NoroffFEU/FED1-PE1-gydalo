@@ -119,7 +119,7 @@ body {
 
 .carousel-button {
     position: absolute;
-    z-index: 2;
+    z-index: 32;
     background: none;
     border: none;
     font-size: 2rem;

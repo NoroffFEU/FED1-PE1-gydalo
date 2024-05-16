@@ -6,6 +6,8 @@
     <title>HotView Labs | Login</title>
     <link rel="stylesheet" href="/CSS/style.css">
     <script type="module" src="/account/login.mjs"></script>
+    <script type="module" src="/scripts/api/auth/login.mjs"></script>
+    <script type="module" src="/scripts/script.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -19,8 +21,8 @@
 <header>
 <a href="/index.html"><img src="/images/logotrans.png" alt="Logo"></a>
 <div class="nav-links-header">
-<a href="/account/login.html">Login</a>
-<a href="/account/register.html">Register</a>
+    <a href="/account/login.html">Login</a>
+    <a href="/account/register.html">Register</a>
 </div>
 </header>
 <body>
@@ -29,15 +31,12 @@
         <h1>HotView <br>LABS</h1>
     <div class="form">
         <h2>LOGIN</h2>
-    <form id="login-form">
+    <form id="loginForm">
         <div class="input-group">
-        <input type="text" id="name" value="tester999" class="form-input" placeholder="Name"/>
+        <input class="form-control" type="email" id="email" class="form-input" name="email" placeholder="Email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Only @(stud).noroff.no domains are allowed to register."/>
         </div>
         <div class="input-group">
-        <input type="email" id="email" value="tester999@stud.noroff.no" class="form-input" placeholder="Email"/>
-        </div>
-        <div class="input-group">
-        <input type="password" id="password" value="password123" class="form-input" placeholder="Password"/>
+        <input class="form-control" type="password" id="password" class="form-input" name="password" placeholder="Password" minLength="8" required/>
        </div>
     <p>Don't have an account?</p>
     <a href="/account/register.html">Register here</a> <br> <br>

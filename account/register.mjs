@@ -1,25 +1,18 @@
-import { doFetch } from "../doFetch.mjs";
-import { REGISTER_URL } from "../shared/constants.mjs";
 
-const registerForm = document.querySelector('#register-form');
+import { register } from "../scripts/api/auth/register.mjs";
 
-// Martins stream 13.02.24
-registerForm.addEventListener('submit', (event) => {
-event.preventDefault();
-const name = event.target[0].value;
-const email = event.target[1].value;
-const password = event.target[2].value;
-registerUser(name, email, password);
-});
+export function setRegisterFormListener () {
+    const form = document.querySelector("#registerForm");
 
-async function registerUser(name, email, password) {
-    console.log('Register user');
-    await doFetch(REGISTER_URL, {
-        method: 'POST',
-        body: JSON.stringify({
-            name,
-            email, 
-            password,
-        }),
-    });
-};
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const profile = Object.fromEntries(formData.entries())
+        
+            //Send to the API
+            register(profile)
+        });
+    }
+}
