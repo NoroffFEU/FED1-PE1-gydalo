@@ -11,6 +11,7 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
 
     import { setRegisterFormListener } from "../account/register.mjs";
     import { setLoginFormListener } from "../account/login.mjs";
+    import * as post from "./api/posts/index.mjs";
 
     const path = location.pathname;
 
@@ -19,7 +20,16 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
     } else if (path === '/account/register.html') {
         setRegisterFormListener()
     };
-    
+
+    /*post.createPost();
+    post.updatePost();
+    post.removePost();
+    post.getPost(); 
+    post.getPosts().then(console.log); */
+
+    post.getPost(12416).then(console.log);
+
+
 
 // Blog Post Carousel HomePage
 const buttons = document.querySelectorAll("[data-carousel-button]")
@@ -40,3 +50,4 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
     })
 });
+
