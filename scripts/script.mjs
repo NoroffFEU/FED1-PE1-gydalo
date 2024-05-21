@@ -13,6 +13,7 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
     import { setLoginFormListener } from "../account/login.mjs";
     import * as post from "./api/posts/index.mjs";
 
+
     const path = location.pathname;
 
     if (path === '/account/login.html') {
@@ -21,13 +22,13 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
         setRegisterFormListener()
     };
 
-    /*post.createPost();
+
+   /* post.createPost();
     post.updatePost();
     post.removePost();
-    post.getPost(); 
-    post.getPosts().then(console.log); */
+    post.getPost().then(console.log); 
+   post.getPosts().then(console.log);  */
 
-    post.getPost(12416).then(console.log);
 
 
 

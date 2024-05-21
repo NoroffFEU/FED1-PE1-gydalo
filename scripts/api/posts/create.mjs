@@ -1,6 +1,7 @@
 import { API_SOCIAL_URL } from "../../../shared/constants.mjs";
 import { authFetch } from "../../../shared/authFetch.mjs";
 
+
 const action = "/posts";
 const method = "post";
 
@@ -9,10 +10,11 @@ export async function createPost(postData) {
 
     const response = await authFetch(createPostURL, {
         method,
-        body:JSON.stringify(postData)
+        body: JSON.stringify(postData)
     })
 
     return await response.json();
+
 }
 
 
