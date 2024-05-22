@@ -26,11 +26,11 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
         listeners.setUpdatePostFormListener()
     };
 
-    /*async function testTemplate() {
+    async function testTemplate() {
         const posts = await postMethods.getPosts();
         const container = document.querySelector("#post");
         templates.renderPostTemplates(posts, container);
     }
 
-    testTemplate(); */
+    testTemplate(); 
 
