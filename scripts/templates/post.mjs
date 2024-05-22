@@ -13,3 +13,7 @@ export function postTemplateB(postData) {
 export function renderPostTemplate(postData, parent) {
     parent.append(postTemplateB(postData))
 }
+
+export function renderPostTemplates(postDataList, parent) {
+    parent.append(...postDataList.map(postTemplateB))
+}
