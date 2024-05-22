@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HotView Labs | Blog Page</title>
+    <title>HotView Labs | Edit Blog Page</title>
     <link rel="stylesheet" href="/CSS/style.css">
     <script type="module" src="/scripts/script.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,35 @@
 </header>
 <body>
     <main>
-        <div class="container">
+            <section class="flexbox-container">
+                <div class="background-image-registerpage">
+                    <h1>HotView <br>LABS</h1>
+
+                <div class="form">
+                    <h2>CREATE POST</h2>
+                <form id="createPost">
+
+                    <div class="input-group">
+                    <input class="form-control" type="text" class="form-input" name="title" placeholder="Title" required maxlength="100"/>
+                    </div>
+
+                    <div class="input-group">
+                    <textarea class="form-control" class="form-input" name="body" placeholder="Blog post text..." required> </textarea>
+                    </div>
+
+                    <!--<div class="input-group">
+                    <input class="form-control" type="text" class="form-input" name="tags" placeholder="Tags"/>
+                   </div> -->
+
+                   <div class="input-group">
+                    <input class="form-control" type="url" class="form-input" name="media" placeholder="Image URL"/>
+                   </div>
+
+                   <input type="submit" value="CREATE" class="submit" />
+                </form>
+                </div>
+            </div>
+            </section>
 
         </div>
     </main>

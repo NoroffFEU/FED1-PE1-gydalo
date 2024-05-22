@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HotView Labs | Edit Blog Page</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <script type="module" src="/scripts/script.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <header>
-<img src="images/logotrans.png" alt="Logo">
+<img src="/images/logotrans.png" alt="Logo">
 <div class="nav-links-header">
     <a href="/account/login.html">Login</a>
     <a href="/account/register.html">Register</a>
@@ -25,7 +25,35 @@
 </header>
 <body>
     <main>
-        <div class="container-fluid" id="post">
+            <section class="flexbox-container">
+                <div class="background-image-registerpage">
+                    <h1>HotView <br>LABS</h1>
+
+                <div class="form">
+                    <h2>EDIT POST</h2>
+                <form id="updatePost">
+
+                    <div class="input-group">
+                    <input class="form-control" type="text" class="form-input" name="title" placeholder="Title" required maxlength="100"/>
+                    </div>
+
+                    <div class="input-group">
+                    <textarea class="form-control" class="form-input" name="body" placeholder="Blog post text..." required> </textarea>
+                    </div>
+
+                    <!-- <div class="input-group">
+                    <input class="form-control" type="text" class="form-input" name="tags" placeholder="Tags"/>
+                   </div> -->
+
+                   <div class="input-group">
+                    <input class="form-control" type="url" class="form-input" name="media" placeholder="Image URL"/>
+                   </div>
+
+                    <input type="submit" value="UPDATE" class="submit" />
+                </form>
+                </div>
+            </div>
+            </section>
 
         </div>
     </main>

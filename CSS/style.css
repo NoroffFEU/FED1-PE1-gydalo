@@ -233,7 +233,7 @@ form {
     margin-bottom: 10px;
 }
 
-input {
+input, textarea {
     width: 80%;
     padding: 10px;
     outline: 0;

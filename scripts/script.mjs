@@ -9,9 +9,7 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
     .catch(error => console.log(error)); */
 
 
-    import { setRegisterFormListener } from "../account/register.mjs";
-    import { setLoginFormListener } from "../account/login.mjs";
-
+    import * as listeners from "./handlers/index.mjs"
     import * as templates from "./templates/index.mjs";
     import * as postMethods from "./api/posts/index.mjs"
 
@@ -19,16 +17,20 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
     const path = location.pathname;
 
     if (path === '/account/login.html') {
-        setLoginFormListener()
+        listeners.setLoginFormListener()
     } else if (path === '/account/register.html') {
-        setRegisterFormListener()
+        listeners.setRegisterFormListener()
+    } else if (path === "/post/create.html") {
+        listeners.setCreatePostFormListener()
+    } else if (path === "/post/edit.html") {
+        listeners.setUpdatePostFormListener()
     };
 
-    async function testTemplate() {
+    /*async function testTemplate() {
         const posts = await postMethods.getPosts();
         const container = document.querySelector("#post");
         templates.renderPostTemplates(posts, container);
     }
 
-    testTemplate();
+    testTemplate(); */
 
