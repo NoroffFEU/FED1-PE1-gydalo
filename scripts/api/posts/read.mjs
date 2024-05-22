@@ -4,9 +4,9 @@ import { authFetch } from "../../../shared/authFetch.mjs";
 const action = "/posts";
 
 export async function getPosts() {
-    const getPostURL = `${API_SOCIAL_URL}${action}`;
+    const updatePostURL = `${API_SOCIAL_URL}${action}`;
 
-    const response = await authFetch(getPostURL)
+    const response = await authFetch(updatePostURL)
 
     return await response.json();
 }
@@ -24,3 +24,4 @@ export async function getPost(id) {
 }
 
 
+// Finn ut hvorfor testen ikke fungerer
