@@ -12,6 +12,6 @@ export function headers() {
 export async function authFetch(url, options = {}) {
     return fetch(url, {
        ...options,
-       headers: headers ()
+       headers: headers()
     })
 }
