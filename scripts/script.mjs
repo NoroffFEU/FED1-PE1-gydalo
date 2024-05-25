@@ -1,13 +1,5 @@
 
 
-/* Probably wrong
-const BASE_API_URL = 'https://v2.api.noroff.dev/blog/posts/';
-
-// Fetch
-fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
-    .then(res => console.log(res))
-    .catch(error => console.log(error)); */
-
 
     import * as listeners from "./handlers/index.mjs"
     import * as templates from "./templates/index.mjs";
@@ -41,6 +33,7 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
                 if (container) {
                     templates.renderPosts(posts, container);
                 } else {
+                    if (window.location.pathname === "index.html")
                     console.error("Container with ID 'postsHomePage' not found.");
                 }
             } catch (error) {
@@ -102,7 +95,7 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
     }
 
     function renderRemoveButton() {
-        if (isLoggedIn()) {
+        if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
             const container = document.querySelector("#deleteButton");
             const id = extractIdFromUrl(); 
     
@@ -112,7 +105,15 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
                 button.addEventListener("click", () => {
                     postMethods.removePost(id);
                 });
+    
                 container.appendChild(button);
+            } else {
+                if (!container) {
+                    console.error("No container found with the selector #deleteButton");
+                }
+                if (!id) {
+                    console.error("No post ID found in URL");
+                }
             }
         }
     }
@@ -120,7 +121,7 @@ fetch('https://v2.api.noroff.dev/blog/posts/Oliver')
 renderRemoveButton(); 
     
     function renderEditButton() {
-        if (isLoggedIn()) {
+        if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
             const container = document.querySelector("#editButton");
             const id = extractIdFromUrl(); 
     

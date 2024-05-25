@@ -16,6 +16,7 @@ export async function updatePost(postData) {
 
     if (response.ok) {
         alert("Post updated successfully!");
+        window.location.href = "/index.html";
     } else {
         alert("Failed to update the post");
     }

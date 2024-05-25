@@ -1,0 +1,135 @@
+/* Fonts */
+h1 {
+    font-family: Roboto, sans-serif;
+}
+
+h2 {
+    font-family: Montserrat Alternates, sans-serif;
+}
+
+p, a {
+    font-family: Padauk, sans-serif;
+}
+
+header button {
+text-decoration: none;
+background: none;
+border: none;
+font-size: 1rem;
+font-family: Padauk, sans-serif;
+color: #14181C;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    min-height: 60px;
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid #e4e4e4;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+header img {
+    width: 50px;
+}
+
+
+button:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.nav-links-header {
+    display: flex;
+    margin-right: 50px;
+    gap: 30px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+form {
+    margin-top: 50px;
+}
+
+.form {
+    padding: 50px;
+    width: 100%;
+    max-width: 800px;
+    height: 700px;
+    text-align: center;
+    background-color: #14181C;
+    color: #fff;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #ffffff44;
+    color: #ffffff;
+    font-size: 1rem;
+    background-color: #ffffff00;
+
+}
+
+.btn {
+    background-color: #ffffff00;
+    cursor: pointer;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #ffffff44;
+    font-size: 1rem;
+    width: 50%;
+    font-family: Montserrat Alternates, sans-serif;
+    color: #fff;
+}
+
+.submit:hover {
+    text-decoration: underline;
+}
+
+.input-group {
+    flex-basis: 49%;
+}
+
+
+
+
+@media (min-width: 800px) {
+    body {
+        margin: 0px 0px 0px 0px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+
+.form {
+    width: 70%;
+}
+
+input {
+    padding: 20px;
+}
+
+.submit {
+    padding: 20px;
+}
+}

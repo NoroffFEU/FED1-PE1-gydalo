@@ -1,0 +1,53 @@
+/* Register/login Page */
+.background-image-registerpage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.758), #0000009d), url(/images/background.jpg);
+    width: 350px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.flexbox-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+textarea {
+    height: 300px;
+}
+
+.background-image-registerpage a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+.background-image-registerpage h2 {
+    font-size: 1.5rem;
+}
+
+
+@media (min-width: 800px) {
+
+    /* Register/ login page */
+    .background-image-registerpage {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+/* Register/ login page */
+.background-image-registerpage {
+    width: 1000px;
+    height: 900px;
+    padding: 50px;
+}
+}

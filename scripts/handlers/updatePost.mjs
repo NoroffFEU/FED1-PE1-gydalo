@@ -10,6 +10,7 @@ export async function setUpdatePostFormListener () {
     const id = url.searchParams.get("id");
 
     if (!id) {
+        if (window.location.pathname === "/post/index.html")
         console.error("No post ID found in URL");
         return;
     }
@@ -64,6 +65,7 @@ export async function setUpdatePostFormListener () {
             console.error("Failed to fetch post:", error);
         }
     } else {
+        if (window.location.pathname === "/post/edit.html")
         console.error("Form with the selector #updatePost not found");
     }
 }

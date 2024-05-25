@@ -32,9 +32,15 @@ export function postTemplate(postData) {
     const body = document.createElement("p");
     body.innerText = postData.body;
 
+    if (window.location.pathname === "/index.html") {
+        body.style.display = "none";
+    }
+
     const post = document.createElement("div");
     post.classList.add("post");
     post.append(mediaContainer, heading, body);
+
+
     return post;
 }
 
@@ -65,6 +71,7 @@ async function blogPageTemplate() {
     const postId = extractIdFromUrl();
 
     if (!postId) {
+        if (window.location.pathname === "/post/index.html")
         console.error("No post ID found in URL");
         return;
     }
@@ -75,6 +82,7 @@ async function blogPageTemplate() {
         if (container) {
             templates.renderSinglePostTemplate(post, container);
         } else {
+            if (window.location.pathname === "/post/index.html")
             console.error("No container found with the selector #post");
         }
     } catch (error) {
