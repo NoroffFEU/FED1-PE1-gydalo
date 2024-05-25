@@ -11,6 +11,14 @@ p, a {
     font-family: Padauk, sans-serif;
 }
 
+header button {
+text-decoration: none;
+background: none;
+border: none;
+font-size: 1.5rem;
+font-family: Padauk, sans-serif;
+color: #14181C;
+}
 
 
 /* Header */
@@ -31,13 +39,10 @@ header img {
     width: 50px;
 }
 
-header a {
-    text-decoration: none;
-    color: #14181C;
-}
 
-a:hover {
+button:hover {
     text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 .nav-links-header {
@@ -69,7 +74,7 @@ a:hover {
 }
 
 .background {
-    background-color: #14181C;
+    background-color: #14181c;
 }
 
 /* Image Carousel Home Page */
@@ -175,6 +180,54 @@ body {
     text-align: center;
     color: #fff;
 }
+
+.create-button {
+    display: flex;
+    justify-content: center;
+}
+
+.create-button, .blog-post-button button {
+    background:  #14181c;;
+    font-size: 2rem;
+    color: #fff;
+    font-family: Montserrat Alternates, sans-serif;
+    padding: 20px;
+    margin: 50px;
+    border-color: rgba(255, 255, 255, 0.097);
+    }
+
+/* Blog post page */
+.container-blogpost-page {
+    display: flex;
+    justify-content: center;
+    }
+
+    .container-blogpost-page h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .container-blogpost-page p {
+        font-size: 1.5rem
+    }
+    
+
+    .container-blogpost-page img {
+        width: 1000px;
+        height: 400px;
+        object-fit: cover;
+        
+        }
+    
+        .post {
+            background-color: #ffffff00;
+        }
+    
+    .container-buttons-blogpage {
+        display: flex;
+        justify-content: center;
+    }
+
 
 /* Register Page */
 .background-image-registerpage {
@@ -287,6 +340,8 @@ input, textarea {
         width: 500px;
         height: 500px;
     }
+
+/* Blog post page */
 
     /* Register page */
     .background-image-registerpage {

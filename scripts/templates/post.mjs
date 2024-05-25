@@ -8,13 +8,6 @@ import * as postMethods from "../api/posts/index.mjs"
 
 
 export function postTemplate(postData) {
-    const title = document.createElement("h3");
-    title.innerText = postData.title;
-
-    const heading = document.createElement("div");
-    heading.classList.add("post-heading");
-    heading.append(title);
-
     const mediaContainer = document.createElement("div");
     mediaContainer.classList.add("media-container");
     const media = document.createElement("img");
@@ -29,12 +22,19 @@ export function postTemplate(postData) {
 
     mediaContainer.appendChild(media);
 
+    const title = document.createElement("h2");
+    title.innerText = postData.title;
+
+    const heading = document.createElement("div");
+    heading.classList.add("post-heading");
+    heading.append(title);
+
     const body = document.createElement("p");
     body.innerText = postData.body;
 
     const post = document.createElement("div");
     post.classList.add("post");
-    post.append(heading, mediaContainer, body);
+    post.append(mediaContainer, heading, body);
     return post;
 }
 
