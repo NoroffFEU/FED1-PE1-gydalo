@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <header>
-<img src="/images/logotrans.png" alt="Logo">
+<a href="/index.html"><img src="/images/logotrans.png" alt="Logo"></a>
 <div class="nav-links-header">
     <a href="/account/login.html">Login</a>
     <a href="/account/register.html">Register</a>
@@ -32,22 +32,25 @@
                 <div class="form">
                     <h2>EDIT POST</h2>
                 <form id="updatePost">
-
                     <div class="input-group">
-                    <input class="form-control" type="text" class="form-input" name="title" placeholder="Title" required maxlength="100"/>
+                        <input class="form-control" type="text" class="form-input" name="title" placeholder="Title" required maxlength="100"/>
+                        </div>
+    
+                        <div class="input-group">
+                        <textarea class="form-control" class="form-input" name="body" placeholder="Blog post text..." required> </textarea>
+                        </div>
+    
+                        <!--<div class="input-group">
+                        <input class="form-control" type="text" class="form-input" name="tags" placeholder="Tags"/>
+                       </div> -->
+    
+                       <div class="input-group">
+                        <input class="form-control" type="url" class="form-input" name="mediaURL" placeholder="Image URL"/>
+                       </div>
+    
+                       <div class="input-group">
+                        <input class="form-control" type="text" name="mediaALT" placeholder="Image Alt Text"/>
                     </div>
-
-                    <div class="input-group">
-                    <textarea class="form-control" class="form-input" name="body" placeholder="Blog post text..." required> </textarea>
-                    </div>
-
-                    <!-- <div class="input-group">
-                    <input class="form-control" type="text" class="form-input" name="tags" placeholder="Tags"/>
-                   </div> -->
-
-                   <div class="input-group">
-                    <input class="form-control" type="url" class="form-input" name="media" placeholder="Image URL"/>
-                   </div>
 
                    <button class="btn" type="submit">UPDATE</button>
 

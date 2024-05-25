@@ -159,6 +159,7 @@ body {
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    color: #fff;
 }
 
 
@@ -243,6 +244,7 @@ input, textarea {
     background-color: #ffffff00;
 
 }
+
 
 .submit {
     background-color: #ffffff00;

@@ -1,10 +1,10 @@
-import { API_SOCIAL_URL } from "../../../shared/constants.mjs";
+import { API_HOST_URL } from "../../../shared/constants.mjs";
 
 const action = "/auth/register";
 const method = "post";
 
 export async function register(profile) {
-    const registerURL = API_SOCIAL_URL + action;
+    const registerURL = API_HOST_URL + action;
     const body = JSON.stringify(profile);
 
    const response = await fetch(registerURL, {

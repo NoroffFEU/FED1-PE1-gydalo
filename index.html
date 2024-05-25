@@ -18,10 +18,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <header>
-<img src="images/logotrans.png" alt="Logo">
-<div class="nav-links-header">
-    <a href="/account/login.html">Login</a>
-    <a href="/account/register.html">Register</a>
+<a href="/index.html"><img src="/images/logotrans.png" alt="Logo"></a>
+<div class="nav-links-header" id="logOut">
+    <div id="notLoggedIn"></div>
+    <div id="notLoggedIn"></div>
+    <div id="logOutButton"></div>
 </div>
 </header>
 <body>
@@ -31,36 +32,22 @@
 <h1 class="labs">LABS</h1>
 </div>
 <section aria-label="Newest Blog Posts">
-    <div class="carousel" data-carousel id="post">
+    <div class="carousel" data-carousel>
         <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button>
         <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
     <ul data-slides>
         <li class="slide" data-active>
-            <img src="images/robot.webp" alt="Image of a robot">
         </li>
         <li class="slide">
-            <img src="images/transparentphone.webp" alt="Image of a transparent phone">
         </li>
         <li class="slide">
-            <img src="images/watch.webp" alt="Image of a watch">
         </li>
     </ul>
 </div>
 </section>
 <h2 class="text-blog-posts">Blog Posts</h2>
-<div class="container-posts-homepage">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
-<img src="images/car.webp" alt="">
+<div id="createButton"></div>
+<div id="postsHomePage" class="container-posts-homepage">
 </div>
 </body>
 </html>

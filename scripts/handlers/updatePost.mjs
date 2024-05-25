@@ -1,5 +1,7 @@
 
 import { getPost, updatePost } from "../api/posts/index.mjs";
+import { setMediaObject } from "./createPost.mjs";
+
 
 export async function setUpdatePostFormListener () {
     const form = document.querySelector("#updatePost");
@@ -7,27 +9,71 @@ export async function setUpdatePostFormListener () {
     const url = new URL(location.href);
     const id = url.searchParams.get("id");
 
+    if (!id) {
+        console.error("No post ID found in URL");
+        return;
+    }
+
     if (form) {
         const button = form.querySelector("button");
-        button.disabled = true;
+        if (button) button.disabled = true;
 
-        const post = await getPost(id);
+        try {
+            const post = await getPost(id);
 
-        form.title.value = post.title;
-        form.body.value = post.body;
-        form.media.value = post.media;
+            if (post) {
+                form.title.value = post.title || "";
+                form.body.value = post.body || "";
+                form.mediaURL.value = post.media.url || "";
+                form.mediaALT.value = post.media.alt || "";
 
-        button.disabled = false;
-    
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const post = Object.fromEntries(formData.entries())
-            post.id = id;
+                if (button) button.disabled = false;
 
-            //Send to the API
-            updatePost(post)
-        })
+                form.addEventListener("submit", async (event) => {
+                    event.preventDefault();
+                    const form = event.target;
+                    const formData = new FormData(form);
+                    const formValues = Object.fromEntries(formData.entries());
+
+             
+                    if (!formValues.mediaURL) {
+                        alert("Image URL is required");
+                        return;
+                    }
+
+                    const postData = {
+                        id: id, 
+                        title: formValues.title,
+                        media: mediaAsObject,
+                        body: formValues.body,
+                    };
+
+                    console.log("Post Data:", postData);
+
+                    try {
+                        const response = await updatePost(postData);
+                        console.log("Post updated successfully:", response);
+                    } catch (error) {
+                        console.error("Error updating post:", error);
+                    }
+                });
+            } else {
+                console.error("Post not found");
+            }
+        } catch (error) {
+            console.error("Failed to fetch post:", error);
+        }
+    } else {
+        console.error("Form with the selector #updatePost not found");
     }
 }
+
+export function mediaAsObject (stringUrl, stringAlt) {
+    const media = {
+        url: stringUrl,
+        alt: stringAlt
+    };
+    return media;
+}
+
+setUpdatePostFormListener();
