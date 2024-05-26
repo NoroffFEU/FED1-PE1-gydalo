@@ -157,7 +157,7 @@ function loginButtonNotLoggedIn() {
             const buttonLogin = document.createElement("button");
             buttonLogin.innerText = "Login";
             buttonLogin.addEventListener("click", () => {
-                window.location.href = `account/login.html`;
+                window.location.href = `/account/login.html`;
 
             });
             container.appendChild(buttonLogin);
@@ -177,7 +177,7 @@ function registerButtonNotLoggedIn() {
             const buttonRegister = document.createElement("button");
             buttonRegister.innerText = "Register";
             buttonRegister.addEventListener("click", () => {
-                window.location.href = `account/register.html`;
+                window.location.href = `./account/register.html`;
 
             });
             container.appendChild(buttonRegister);
