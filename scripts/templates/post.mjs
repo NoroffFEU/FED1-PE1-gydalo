@@ -52,7 +52,7 @@ if (window.location.pathname === "/index.html") {
     const author = document.createElement("p");
     author.innerText = `Author: ${postData.author.name}`;
 
-    if (window.location.pathname === "index.html") {
+    if (window.location.pathname === "/index.html") {
         body.style.display = "none";
         title.style.display = "none";
         author.style.display = "none";
