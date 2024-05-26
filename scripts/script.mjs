@@ -9,13 +9,13 @@
 
     const path = location.pathname;
 
-    if (path === '/account/login.html') {
+    if (path === 'account/login.html') {
         listeners.setLoginFormListener()
-    } else if (path === '/account/register.html') {
+    } else if (path === 'account/register.html') {
         listeners.setRegisterFormListener()
-    } else if (path === "/post/create.html") {
+    } else if (path === "post/create.html") {
         listeners.setCreatePostFormListener()
-    } else if (path === "/post/edit.html") {
+    } else if (path === "post/edit.html") {
         listeners.setUpdatePostFormListener()
     };
 
@@ -93,7 +93,7 @@
     }
 
     function renderRemoveButton() {
-        if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
+        if (window.location.pathname === "post/index.html" && isLoggedIn()) {
             const container = document.querySelector("#deleteButton");
             const id = extractIdFromUrl(); 
     
@@ -119,7 +119,7 @@
 renderRemoveButton(); 
     
     function renderEditButton() {
-        if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
+        if (window.location.pathname === "post/index.html" && isLoggedIn()) {
             const container = document.querySelector("#editButton");
             const id = extractIdFromUrl(); 
     
@@ -127,7 +127,7 @@ renderRemoveButton();
                 const button = document.createElement("button");
                 button.innerText = "Edit Post";
                 button.addEventListener("click", () => {
-                    window.location.href = `/post/edit.html?id=${id}`;
+                    window.location.href = `post/edit.html?id=${id}`;
                 });
                 container.appendChild(button);
             }
@@ -144,7 +144,7 @@ function renderCreateButton() {
             const button = document.createElement("button");
             button.innerText = "Create new Post";
             button.addEventListener("click", () => {
-                window.location.href = `/post/create.html`;
+                window.location.href = `post/create.html`;
             });
             
             container.appendChild(button);
@@ -168,7 +168,7 @@ function logOut() {
             localStorage.clear();
 
             alert("You are now logged out");
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         });
 
         container.appendChild(button);
@@ -190,7 +190,7 @@ function loginButtonNotLoggedIn() {
             const buttonLogin = document.createElement("button");
             buttonLogin.innerText = "Login";
             buttonLogin.addEventListener("click", () => {
-                window.location.href = `/account/login.html`;
+                window.location.href = `account/login.html`;
 
             });
             container.appendChild(buttonLogin);
@@ -210,7 +210,7 @@ function registerButtonNotLoggedIn() {
             const buttonRegister = document.createElement("button");
             buttonRegister.innerText = "Register";
             buttonRegister.addEventListener("click", () => {
-                window.location.href = `/account/register.html`;
+                window.location.href = `account/register.html`;
 
             });
             container.appendChild(buttonRegister);

@@ -14,7 +14,7 @@ export async function createPost(postData) {
     
     if (response.ok) {
         alert("Post created successfully!");
-        window.location.href = "/index.html";
+        window.location.href = "index.html";
     } else {
         alert("Failed to create the post");
     }
@@ -24,12 +24,5 @@ export async function createPost(postData) {
 }
 
 
-/*
+
     
-import * as posts from "./api/posts/index.mjs";
-
-posts.createPost();
-
-posts.readPosts();
-
-posts.readPosts(); */

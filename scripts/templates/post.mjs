@@ -16,7 +16,7 @@ export function postTemplate(postData) {
     media.setAttribute("src", postData.media.url);
     media.alt = `Image from ${postData.title}`;
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "index.html") {
     const titleOverlay = document.createElement("div");
     titleOverlay.classList.add("title-overlay");
     titleOverlay.innerText = postData.title;
@@ -25,7 +25,7 @@ if (window.location.pathname === "/index.html") {
 }
 
     mediaContainer.addEventListener("click", () => {
-        const targetUrl = `/post/index.html?id=${postData.id}`;
+        const targetUrl = `post/index.html?id=${postData.id}`;
         console.log(`Navigating to: ${targetUrl}`);
         window.location.href = targetUrl;
     });
@@ -53,7 +53,7 @@ if (window.location.pathname === "/index.html") {
     const author = document.createElement("p");
     author.innerText = `Author: ${postData.author.name}`;
 
-    if (window.location.pathname === "/index.html") {
+    if (window.location.pathname === "index.html") {
         body.style.display = "none";
         title.style.display = "none";
         author.style.display = "none";
@@ -105,7 +105,7 @@ async function sortAndRenderPosts(order) {
     renderPostsTemplate(posts);
 }
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "index.html") {
     document.querySelector("#newest-button").addEventListener("click", () => {
         sortAndRenderPosts('newest');
     });
@@ -122,7 +122,7 @@ async function blogPageTemplate() {
     const postId = extractIdFromUrl();
 
     if (!postId) {
-        if (window.location.pathname === "/post/index.html")
+        if (window.location.pathname === "post/index.html")
         console.error("No post ID found in URL");
         return;
     }
@@ -133,7 +133,7 @@ async function blogPageTemplate() {
         if (container) {
             renderSinglePostTemplate(post, container);
         } else {
-            if (window.location.pathname === "/post/index.html")
+            if (window.location.pathname === "post/index.html")
             console.error("No container found with the selector #post");
         }
     } catch (error) {
@@ -141,7 +141,7 @@ async function blogPageTemplate() {
     }
 }
 
-if (window.location.pathname === "/post/index.html") {
+if (window.location.pathname === "post/index.html") {
 blogPageTemplate();
 }
 
