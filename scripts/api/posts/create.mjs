@@ -23,6 +23,7 @@ export async function createPost(postData) {
 
 }
 
+// why isnt it updating
 
 
     
