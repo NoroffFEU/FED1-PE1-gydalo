@@ -1,7 +1,7 @@
 
-import { getPost, updatePost } from "../api/posts/index.mjs";
-import { setMediaObject } from "./createPost.mjs";
-import * as storage from "../../account/storage.mjs"
+import { getPost, updatePost } from "api/posts/index.mjs";
+import { setMediaObject } from "createPost.mjs";
+import * as storage from "account/storage.mjs"
 
 
 export async function setUpdatePostFormListener () {

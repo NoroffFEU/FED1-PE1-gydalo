@@ -1,5 +1,5 @@
 
-import { login } from "../api/auth/login.mjs";
+import { login } from "api/auth/login.mjs";
 
 export function setLoginFormListener () {
     const form = document.querySelector("#loginForm");

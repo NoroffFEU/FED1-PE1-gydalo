@@ -1,10 +1,10 @@
 //import { API_POST_BASE } from "../../shared/constants.mjs";
 
-import { getPosts } from "../api/posts/read.mjs";
-import { extractIdFromUrl } from "../script.mjs"; 
+import { getPosts } from "api/posts/read.mjs";
+import { extractIdFromUrl } from "script.mjs"; 
 
-import * as templates from "../templates/index.mjs";
-import * as postMethods from "../api/posts/index.mjs"
+import * as templates from "templates/index.mjs";
+import * as postMethods from "api/posts/index.mjs"
 
 
 

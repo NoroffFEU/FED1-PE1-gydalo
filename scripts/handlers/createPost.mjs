@@ -1,5 +1,5 @@
 
-import { createPost } from "../api/posts/index.mjs";
+import { createPost } from "api/posts/index.mjs";
 
 
 export function setCreatePostFormListener () {
