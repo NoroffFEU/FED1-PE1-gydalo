@@ -24,7 +24,7 @@ export function setCreatePostFormListener () {
             const postData = {
                 title: formValues.title,
                 media: mediaAsObject,
-                body: formValues.body,
+                body: formValues.body, 
             }
 
             console.log("Post Data:", postData);

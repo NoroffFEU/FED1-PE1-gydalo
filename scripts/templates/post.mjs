@@ -7,6 +7,7 @@ import * as templates from "../templates/index.mjs";
 import * as postMethods from "../api/posts/index.mjs"
 
 
+
 export function postTemplate(postData) {
     const mediaContainer = document.createElement("div");
     mediaContainer.classList.add("media-container");
@@ -22,7 +23,6 @@ if (window.location.pathname === "/index.html") {
    
     mediaContainer.appendChild(titleOverlay);
 }
-
 
     mediaContainer.addEventListener("click", () => {
         const targetUrl = `/post/index.html?id=${postData.id}`;
@@ -44,14 +44,26 @@ if (window.location.pathname === "/index.html") {
     const body = document.createElement("p");
     body.innerText = postData.body;
 
+    const created = document.createElement("p");
+    created.innerText = `Created: ${postData.created}`;
+
+    const updated = document.createElement("p");
+    updated.innerText = `Last updated: ${postData.updated}`;
+
+    const author = document.createElement("p");
+    author.innerText = `Author: ${postData.author.name}`;
+
     if (window.location.pathname === "/index.html") {
         body.style.display = "none";
         title.style.display = "none";
+        author.style.display = "none";
+        created.style.display = "none";
+        updated.style.display = "none";
     }
 
     const post = document.createElement("div");
     post.classList.add("post");
-    post.append(mediaContainer, heading, body);
+    post.append(mediaContainer, heading, author, created, updated, body);
 
 
     return post;
@@ -60,6 +72,7 @@ if (window.location.pathname === "/index.html") {
 
 export function renderPostsTemplate(posts){
     const postsHomePage = document.querySelector("#postsHomePage");
+    postsHomePage.innerHTML = '';
     posts.forEach(post => {
        
        postsHomePage.appendChild(postTemplate(post)); 
@@ -79,6 +92,31 @@ export function renderSinglePostTemplate(post, container) {
     container.appendChild(postElement);
 }
 
+async function sortAndRenderPosts(order) {
+    const postList = await getPosts();
+    const posts = postList.data;
+
+    posts.sort((a, b) => {
+        const dateA = new Date(a.created);
+        const dateB = new Date(b.created);
+        return order === 'newest' ? dateB - dateA : dateA - dateB;
+    });
+
+    renderPostsTemplate(posts);
+}
+
+if (window.location.pathname === "/index.html") {
+    document.querySelector("#newest-button").addEventListener("click", () => {
+        sortAndRenderPosts('newest');
+    });
+
+    document.querySelector("#oldest-button").addEventListener("click", () => {
+        sortAndRenderPosts('oldest');
+    });
+
+    sortAndRenderPosts('newest');
+}
+
 
 async function blogPageTemplate() {
     const postId = extractIdFromUrl();
@@ -93,7 +131,7 @@ async function blogPageTemplate() {
         const post = await postMethods.getPost(postId);
         const container = document.querySelector("#post");
         if (container) {
-            templates.renderSinglePostTemplate(post, container);
+            renderSinglePostTemplate(post, container);
         } else {
             if (window.location.pathname === "/post/index.html")
             console.error("No container found with the selector #post");
@@ -103,4 +141,9 @@ async function blogPageTemplate() {
     }
 }
 
+if (window.location.pathname === "/post/index.html") {
 blogPageTemplate();
+}
+
+
+
