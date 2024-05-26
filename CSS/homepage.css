@@ -23,6 +23,27 @@
     background-color: #14181c;
 }
 
+.sorting-buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.sorting-button {
+    background:  #14181c;;
+    font-size: 1rem;
+    color: #fff;
+    font-family: Montserrat Alternates, sans-serif;
+    padding: 20px;
+    margin: 10px;
+    border-color: rgba(255, 255, 255, 0.097);
+    }
+
+.sorting-button button:hover {
+    background: #0D1013;
+    }
+
+
 .create-button button {
     background:  #14181c;;
     font-size: 1rem;
@@ -36,6 +57,7 @@
     .create-button button:hover {
         background:  #0D1013;
     }
+
 
 /* Image Carousel Home Page */
 
@@ -133,6 +155,7 @@
 
 
 /* Blog Post list HomePage */
+
 .media-container {
     position: relative;
     display: inline-block;
