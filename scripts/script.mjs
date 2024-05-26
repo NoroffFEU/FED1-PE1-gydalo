@@ -1,21 +1,21 @@
 
 
 
-    import * as listeners from "./handlers/index.mjs"
-    import * as templates from "./templates/index.mjs";
-    import * as postMethods from "./api/posts/index.mjs"
-    import { getPosts } from "./api/posts/index.mjs";
+    import * as listeners from "../../handlers/index.mjs"
+    import * as templates from "../../templates/index.mjs";
+    import * as postMethods from "../../api/posts/index.mjs"
+    import { getPosts } from "../../api/posts/index.mjs";
 
 
     const path = location.pathname;
 
-    if (path === '/account/login.html') {
+    if (path === 'account/login.html') {
         listeners.setLoginFormListener()
-    } else if (path === '/account/register.html') {
+    } else if (path === 'account/register.html') {
         listeners.setRegisterFormListener()
-    } else if (path === "/post/create.html") {
+    } else if (path === "post/create.html") {
         listeners.setCreatePostFormListener()
-    } else if (path === "/post/edit.html") {
+    } else if (path === "post/edit.html") {
         listeners.setUpdatePostFormListener()
     };
 
