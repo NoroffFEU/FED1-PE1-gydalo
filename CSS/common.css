@@ -107,7 +107,7 @@ input, textarea {
 }
 
 .background-image-registerpage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.758), #0000009d), url(images/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.758), #0000009d), url(/images/background.jpg);
     width: 300px;
     height: 900px;
     background-repeat: no-repeat;
