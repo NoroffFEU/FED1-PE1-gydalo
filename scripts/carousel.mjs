@@ -1,4 +1,4 @@
-import { getPosts } from "../api/posts/index.mjs"
+import { getPosts } from "./api/posts/index.mjs"
 
 async function fetchPosts() {
     try {
