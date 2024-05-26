@@ -1,4 +1,4 @@
-import { load } from "/account/storage.mjs";
+import { load } from "../account/storage.mjs";
 
 
 export function headers() {
