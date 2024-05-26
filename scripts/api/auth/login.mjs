@@ -1,4 +1,4 @@
-import { API_HOST_URL } from "./shared/constants.mjs";
+import { API_HOST_URL } from "/shared/constants.mjs";
 import * as storage from "/account/storage.mjs"
 
 

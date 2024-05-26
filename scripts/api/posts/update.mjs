@@ -1,4 +1,4 @@
-import { API_POST_BASE } from "./shared/constants.mjs";
+import { API_POST_BASE } from "/shared/constants.mjs";
 import { authFetch } from "/shared/authFetch.mjs";
 
 const method = "put";
