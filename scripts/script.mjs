@@ -7,6 +7,7 @@
     import { getPosts } from "./api/posts/index.mjs";
 
 
+
     const path = location.pathname;
 
     if (path === '/account/login.html') {
@@ -23,7 +24,6 @@
 
     //renderPosts();
 
-    
     async function homePageTemplate() {
             try {
                 const posts = await postMethods.getPosts();
