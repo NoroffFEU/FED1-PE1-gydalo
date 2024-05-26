@@ -31,6 +31,10 @@ function createCarouselItem(post, isActive = false) {
     //li.appendChild(title);
     //li.appendChild(body);
 
+    li.addEventListener("click", () => {
+        window.location.href = `/post/index.html?id=${post.id}`
+    })
+
     return li;
 }
 
@@ -39,10 +43,8 @@ async function initializeCarousel() {
     const slidesContainer = document.querySelector('[data-slides]');
     slidesContainer.innerHTML = ''; 
 
-       // Sort posts by the created date to ensure the most recent posts are first
        posts.sort((a, b) => new Date(b.created) - new Date(a.created));
 
-       // Get the first three most recent posts
        const recentPosts = posts.slice(0, 3);
 
     recentPosts.forEach((post, index) => {

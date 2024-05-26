@@ -1,6 +1,7 @@
 
 import { getPost, updatePost } from "../api/posts/index.mjs";
 import { setMediaObject } from "./createPost.mjs";
+import * as storage from "../../account/storage.mjs"
 
 
 export async function setUpdatePostFormListener () {
@@ -21,8 +22,14 @@ export async function setUpdatePostFormListener () {
 
         try {
             const post = await getPost(id);
+            const currentUser = storage.load("profile");
 
             if (post) {
+                if (post.author.email !== currentUser.email) {
+                    alert("You are not authorized to edit this post.");
+                    return;
+                }
+
                 form.title.value = post.title || "";
                 form.body.value = post.body || "";
                 form.mediaURL.value = post.media.url || "";
@@ -45,7 +52,7 @@ export async function setUpdatePostFormListener () {
                     const postData = {
                         id: id, 
                         title: formValues.title,
-                        media: mediaAsObject,
+                        media: setMediaObject(formValues.mediaURL, formValues.mediaALT),
                         body: formValues.body,
                     };
 

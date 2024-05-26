@@ -10,17 +10,29 @@ import * as postMethods from "../api/posts/index.mjs"
 export function postTemplate(postData) {
     const mediaContainer = document.createElement("div");
     mediaContainer.classList.add("media-container");
+
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
     media.alt = `Image from ${postData.title}`;
 
-    media.addEventListener("click", () => {
+if (window.location.pathname === "/index.html") {
+    const titleOverlay = document.createElement("div");
+    titleOverlay.classList.add("title-overlay");
+    titleOverlay.innerText = postData.title;
+   
+    mediaContainer.appendChild(titleOverlay);
+}
+
+
+    mediaContainer.addEventListener("click", () => {
         const targetUrl = `/post/index.html?id=${postData.id}`;
         console.log(`Navigating to: ${targetUrl}`);
         window.location.href = targetUrl;
     });
 
     mediaContainer.appendChild(media);
+
+
 
     const title = document.createElement("h2");
     title.innerText = postData.title;
@@ -34,6 +46,7 @@ export function postTemplate(postData) {
 
     if (window.location.pathname === "/index.html") {
         body.style.display = "none";
+        title.style.display = "none";
     }
 
     const post = document.createElement("div");

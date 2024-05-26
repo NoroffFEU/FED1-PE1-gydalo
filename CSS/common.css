@@ -4,7 +4,7 @@ h1 {
 }
 
 h2 {
-    font-family: Montserrat Alternates, sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 p, a {
@@ -99,6 +99,7 @@ input, textarea {
     width: 50%;
     font-family: Montserrat Alternates, sans-serif;
     color: #fff;
+    cursor: pointer;
 }
 
 .submit:hover {

@@ -13,7 +13,6 @@ export function setCreatePostFormListener () {
             const formValues = Object.fromEntries(formData.entries());
 
 
-            // Validate mediaURL
             if (!formValues.mediaURL) {
                 alert("Image URL is required");
                 return;

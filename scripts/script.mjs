@@ -23,8 +23,6 @@
 
     //renderPosts();
 
-
-
     
     async function homePageTemplate() {
             try {
@@ -168,13 +166,16 @@ function logOut() {
         button.innerText = "Logout";
         button.addEventListener("click", () => {
             localStorage.clear();
-            checkStorage();
+
+            alert("You are now logged out");
+            window.location.href = "/index.html";
         });
 
         container.appendChild(button);
     }
 }
 }
+
 
 logOut();
 
