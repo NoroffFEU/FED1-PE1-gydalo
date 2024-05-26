@@ -1,7 +1,7 @@
 /* Background image HomePage */
 
 .background-image-homepage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.758), #0000009d), url(/images/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.758), #0000009d), url(images/background.jpg);
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
