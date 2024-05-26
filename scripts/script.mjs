@@ -1,21 +1,21 @@
 
 
 
-    import * as listeners from "handlers/index.mjs"
-    import * as templates from "templates/index.mjs";
-    import * as postMethods from "api/posts/index.mjs"
-    import { getPosts } from "api/posts/index.mjs";
+    import * as listeners from "./handlers/index.mjs"
+    import * as templates from "./templates/index.mjs";
+    import * as postMethods from "./api/posts/index.mjs"
+    import { getPosts } from "./api/posts/index.mjs";
 
 
     const path = location.pathname;
 
-    if (path === 'account/login.html') {
+    if (path === '/account/login.html') {
         listeners.setLoginFormListener()
-    } else if (path === 'account/register.html') {
+    } else if (path === '/account/register.html') {
         listeners.setRegisterFormListener()
-    } else if (path === "post/create.html") {
+    } else if (path === "/post/create.html") {
         listeners.setCreatePostFormListener()
-    } else if (path === "post/edit.html") {
+    } else if (path === "/post/edit.html") {
         listeners.setUpdatePostFormListener()
     };
 
@@ -31,7 +31,7 @@
                 if (container) {
                     templates.renderPosts(posts, container);
                 } else {
-                    if (window.location.pathname === "index.html")
+                    if (window.location.pathname === "/index.html")
                     console.error("Container with ID 'postsHomePage' not found.");
                 }
             } catch (error) {
@@ -41,39 +41,6 @@
 
        homePageTemplate(); 
 
-// Dont know what this is
-        /*
-        const posts = await postMethods.getPosts();
-        const container = document.querySelector("#postsHomePage");
-        templates.renderPostTemplates(posts, container); */
-    
-
-   // homePageTemplate(); 
-
-/*
-    function extractIdFromUrl() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('id');
-    }
-
-    async function blogPageTemplate() {
-        const postId = extractIdFromUrl();
-    
-        if (!postId) {
-            console.error("No post ID found in URL");
-            return;
-        }
-    
-        try {
-            const post = await postMethods.getPost(postId);
-            const container = document.querySelector("#post");
-            templates.renderPostsTemplate(post, container);
-        } catch (error) {
-            console.error("Failed to fetch and render post:", error);
-        }
-    }
-    
-    blogPageTemplate(); */
 
 
     export function extractIdFromUrl() {
@@ -93,7 +60,7 @@
     }
 
     function renderRemoveButton() {
-        if (window.location.pathname === "post/index.html" && isLoggedIn()) {
+        if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
             const container = document.querySelector("#deleteButton");
             const id = extractIdFromUrl(); 
     
@@ -119,7 +86,7 @@
 renderRemoveButton(); 
     
     function renderEditButton() {
-        if (window.location.pathname === "post/index.html" && isLoggedIn()) {
+        if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
             const container = document.querySelector("#editButton");
             const id = extractIdFromUrl(); 
     

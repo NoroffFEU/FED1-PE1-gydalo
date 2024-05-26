@@ -1,4 +1,4 @@
-import { getPosts } from "api/posts/read.mjs"
+import { getPosts } from "./api/posts/read.mjs"
 
 async function fetchPosts() {
     try {
@@ -33,7 +33,7 @@ function createCarouselItem(post, isActive = false) {
     //li.appendChild(body);
 
     li.addEventListener("click", () => {
-        window.location.href = `post/index.html?id=${post.id}`
+        window.location.href = `../post/index.html?id=${post.id}`
     })
 
     return li;

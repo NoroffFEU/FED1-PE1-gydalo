@@ -1,5 +1,5 @@
-import { API_POST_BASE } from "shared/constants.mjs";
-import { authFetch } from "shared/authFetch.mjs";
+import { API_POST_BASE } from "../../shared/constants.mjs";
+import { authFetch } from "../../shared/authFetch.mjs";
 
 
 const method = "post";
@@ -14,7 +14,7 @@ export async function createPost(postData) {
     
     if (response.ok) {
         alert("Post created successfully!");
-        window.location.href = "index.html";
+        window.location.href = "../../../index.html";
     } else {
         alert("Failed to create the post");
     }

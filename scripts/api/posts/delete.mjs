@@ -1,5 +1,5 @@
-import { API_POST_BASE } from "shared/constants.mjs";
-import { authFetch } from "shared/authFetch.mjs";
+import { API_POST_BASE } from "../../shared/constants.mjs";
+import { authFetch } from "../../shared/authFetch.mjs";
 
 
 const method = "delete";
@@ -18,7 +18,7 @@ export async function removePost(id) {
     
     alert("You have deleted the post");
 
-    window.location.href = "index.html";
+    window.location.href = "../../../index.html";
 
 
 }

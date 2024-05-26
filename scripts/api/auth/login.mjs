@@ -1,5 +1,5 @@
-import { API_HOST_URL } from "shared/constants.mjs";
-import * as storage from "account/storage.mjs"
+import { API_HOST_URL } from "../../shared/constants.mjs";
+import * as storage from "../../../account/storage.mjs"
 
 
 const action = "/auth/login";
@@ -29,7 +29,7 @@ export async function login(profile) {
 
     alert("You are now logged in");
 
-    window.location.href = "index.html";
+    window.location.href = "../../../index.html";
 } catch (error) {
     alert("Wrong username or password");
 }
