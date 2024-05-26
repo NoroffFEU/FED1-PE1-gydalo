@@ -1,4 +1,4 @@
-import { API_HOST_URL } from "../../../shared/constants.mjs";
+import { API_HOST_URL } from "/FED1-PE1-gydalo/shared/constants.mjs";
 
 const action = "/auth/register";
 const method = "post";
@@ -19,5 +19,5 @@ export async function register(profile) {
     alert("You are now registered");
     console.log(result);
 
-    window.location.href = "../../../account/login.html";
+    window.location.href = "/FED1-PE1-gydalo/account/login.html";
 }

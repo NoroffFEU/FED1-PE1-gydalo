@@ -1,5 +1,5 @@
-import { API_POST_BASE } from "../../../shared/constants.mjs";
-import { authFetch } from "../../../shared/authFetch.mjs";
+import { API_POST_BASE } from "/FED1-PE1-gydalo/shared/constants.mjs";
+import { authFetch } from "/FED1-PE1-gydalo/shared/authFetch.mjs";
 
 
 export async function getPosts() {

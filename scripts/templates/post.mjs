@@ -1,9 +1,9 @@
 //import { API_POST_BASE } from "../../shared/constants.mjs";
 
-import { getPosts } from "../api/posts/read.mjs";
-import { extractIdFromUrl } from "../script.mjs"; 
-import * as templates from "./index.mjs";
-import * as postMethods from "../api/posts/index.mjs"
+import { getPosts } from "/FED1-PE1-gydalo/api/posts/read.mjs";
+import { extractIdFromUrl } from "/FED1-PE1-gydalo/script.mjs"; 
+import * as templates from "/FED1-PE1-gydalo/index.mjs";
+import * as postMethods from "/FED1-PE1-gydalo/api/posts/index.mjs"
 
 
 
@@ -15,7 +15,7 @@ export function postTemplate(postData) {
     media.setAttribute("src", postData.media.url);
     media.alt = `Image from ${postData.title}`;
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "/FED1-PE1-gydalo/index.html") {
     const titleOverlay = document.createElement("div");
     titleOverlay.classList.add("title-overlay");
     titleOverlay.innerText = postData.title;
@@ -24,7 +24,7 @@ if (window.location.pathname === "/index.html") {
 }
 
     mediaContainer.addEventListener("click", () => {
-        const targetUrl = `../../post/index.html?id=${postData.id}`;
+        const targetUrl = `/FED1-PE1-gydalo/post/index.html?id=${postData.id}`;
         console.log(`Navigating to: ${targetUrl}`);
         window.location.href = targetUrl;
     });
@@ -52,7 +52,7 @@ if (window.location.pathname === "/index.html") {
     const author = document.createElement("p");
     author.innerText = `Author: ${postData.author.name}`;
 
-    if (window.location.pathname === "/index.html") {
+    if (window.location.pathname === "/FED1-PE1-gydalo/index.html") {
         body.style.display = "none";
         title.style.display = "none";
         author.style.display = "none";
@@ -104,7 +104,7 @@ async function sortAndRenderPosts(order) {
     renderPostsTemplate(posts);
 }
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "/FED1-PE1-gydalo/index.html") {
     document.querySelector("#newest-button").addEventListener("click", () => {
         sortAndRenderPosts('newest');
     });
@@ -121,7 +121,7 @@ async function blogPageTemplate() {
     const postId = extractIdFromUrl();
 
     if (!postId) {
-        if (window.location.pathname === "/post/index.html")
+        if (window.location.pathname === "/FED1-PE1-gydalo/post/index.html")
         console.error("No post ID found in URL");
         return;
     }
@@ -132,7 +132,7 @@ async function blogPageTemplate() {
         if (container) {
             renderSinglePostTemplate(post, container);
         } else {
-            if (window.location.pathname === "/post/index.html")
+            if (window.location.pathname === "/FED1-PE1-gydalo/post/index.html")
             console.error("No container found with the selector #post");
         }
     } catch (error) {
@@ -140,7 +140,7 @@ async function blogPageTemplate() {
     }
 }
 
-if (window.location.pathname === "/post/index.html") {
+if (window.location.pathname === "/FED1-PE1-gydalo/post/index.html") {
 blogPageTemplate();
 }
 

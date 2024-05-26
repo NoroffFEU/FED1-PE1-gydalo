@@ -1,4 +1,4 @@
-import { load } from "../account/storage.mjs";
+import { load } from "/FED1-PE1-gydalo/account/storage.mjs";
 
 
 export function headers() {
