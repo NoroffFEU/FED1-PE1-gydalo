@@ -25,7 +25,7 @@
 
 .create-button button {
     background:  #14181c;;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #fff;
     font-family: Montserrat Alternates, sans-serif;
     padding: 20px;
@@ -33,6 +33,9 @@
     border-color: rgba(255, 255, 255, 0.097);
     }
 
+    .create-button button:hover {
+        background:  #0D1013;
+    }
 
 /* Image Carousel Home Page */
 
@@ -40,13 +43,26 @@
     box-sizing: border-box;
 }
 
+.carousel-title {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 3;
+}
 
 
 .carousel {
     width: 80vw;
-    height: 30vh;
+    height: 50vh;
     position: relative;
     margin: 50px auto 50px auto;
+    z-index: 1;
 }
 
 .carousel > ul {
@@ -61,6 +77,8 @@
     opacity: 0;
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
+    cursor: pointer;
+
 }
 
 .slide > img {
@@ -69,7 +87,10 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
+    z-index: 1;
+    filter: brightness(40%);
 }
+
 
 .slide[data-active] {
     opacity: 1;
@@ -79,7 +100,7 @@
 
 .carousel-button {
     position: absolute;
-    z-index: 32;
+    z-index: 2;
     background: none;
     border: none;
     font-size: 2rem;
@@ -131,7 +152,7 @@
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s;
     pointer-events: none;
     cursor: pointer;
@@ -190,5 +211,15 @@
     .container-posts-homepage img {
         width: 500px;
         height: 500px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .title-overlay {
+        opacity: 0;
+    }
+
+    .create-button button {
+        font-size: 2rem;
     }
 }

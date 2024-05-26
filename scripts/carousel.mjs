@@ -21,14 +21,15 @@ function createCarouselItem(post, isActive = false) {
     img.src = post.media.url;
     img.alt = post.media.alt || 'Blog post image';
 
-    const title = document.createElement('h3');
+    const title = document.createElement('h2');
     title.innerText = post.title;
+    title.classList.add('carousel-title');
 
     const body = document.createElement('p');
     body.innerText = post.body;
 
     li.appendChild(img);
-    //li.appendChild(title);
+    li.appendChild(title);
     //li.appendChild(body);
 
     li.addEventListener("click", () => {

@@ -5,13 +5,14 @@ h1 {
 
 h2 {
     font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 0.75rem;
 }
 
 p, a {
     font-family: Padauk, sans-serif;
 }
 
-header button {
+.nav-links-header button {
 text-decoration: none;
 background: none;
 border: none;
@@ -39,20 +40,15 @@ header img {
     width: 50px;
 }
 
-
-button:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
+button {
+    cursor: pointer;
 }
+
 
 .nav-links-header {
     display: flex;
     margin-right: 50px;
     gap: 30px;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 ::placeholder {
@@ -64,9 +60,9 @@ form {
 }
 
 .form {
-    padding: 50px;
+    padding: 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 200px;
     height: 700px;
     text-align: center;
     background-color: #14181C;
@@ -110,6 +106,41 @@ input, textarea {
     flex-basis: 49%;
 }
 
+.background-image-registerpage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.758), #0000009d), url(/images/background.jpg);
+    width: 300px;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.flexbox-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+textarea {
+    height: 300px;
+}
+
+.background-image-registerpage a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+.background-image-registerpage h2 {
+    font-size: 1.5rem;
+}
+
+
 
 
 
@@ -118,13 +149,22 @@ input, textarea {
         margin: 0px 0px 0px 0px;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Form-pages */
+    .background-image-registerpage {
+        width: 600px;
+    }
+
+    .form {
+    max-width: 400px;
+    padding: 50px;
+    }
 }
 
 @media (min-width: 1000px) {
-
-.form {
-    width: 70%;
-}
 
 input {
     padding: 20px;
@@ -133,4 +173,19 @@ input {
 .submit {
     padding: 20px;
 }
+
+/* Form-pages */
+.background-image-registerpage {
+    width: 800px;
+    height: 900px;
+    padding: 50px;
 }
+
+.form {
+    max-width: 800px;
+    height: 700px;
+    width: 70%;
+}
+
+}
+
