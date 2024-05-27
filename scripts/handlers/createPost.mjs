@@ -27,9 +27,6 @@ export function setCreatePostFormListener () {
                 body: formValues.body, 
             }
 
-            console.log("Post Data:", postData);
-
-            //Send to the API
             createPost(postData)
                 .then(response => {
                     console.log("Post created successfully:", response);

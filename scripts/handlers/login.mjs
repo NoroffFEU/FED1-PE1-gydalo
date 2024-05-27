@@ -1,6 +1,8 @@
 
 import { login } from "/FED1-PE1-gydalo/scripts/api/auth/login.mjs";
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+
 export function setLoginFormListener () {
     const form = document.querySelector("#loginForm");
 
@@ -11,7 +13,6 @@ export function setLoginFormListener () {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries())
         
-            //Send to the API
             login(profile)
         })
     }

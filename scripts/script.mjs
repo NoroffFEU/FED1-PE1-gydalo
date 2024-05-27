@@ -22,7 +22,6 @@
 
     getPosts();
 
-    //renderPosts();
 
     async function homePageTemplate() {
             try {
@@ -188,31 +187,3 @@ function registerButtonNotLoggedIn() {
 
 registerButtonNotLoggedIn();
 
-
-//     localStorage.clear();
-
-
-// TEST //
-/*
-async function blogPageTemplate() {
-    const posts = await postMethods.getPosts();
-    const container = document.querySelector("#post");
-    templates.renderPostTemplates(posts, container);
-}
-
-blogPageTemplate(); */
-
-
-
-
-
-/*
-     async function testTemplate() {
-        const posts = await postMethods.getPosts();
-        const container = document.querySelector("#post");
-        templates.renderPostTemplates(post, container);
-    }
-
-    testTemplate(); 
-  
-*/

@@ -30,7 +30,6 @@ function createCarouselItem(post, isActive = false) {
 
     li.appendChild(img);
     li.appendChild(title);
-    //li.appendChild(body);
 
     li.addEventListener("click", () => {
         window.location.href = `/FED1-PE1-gydalo/post/index.html?id=${post.id}`

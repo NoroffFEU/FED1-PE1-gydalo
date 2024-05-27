@@ -1,5 +1,7 @@
 import { API_HOST_URL } from "/FED1-PE1-gydalo/shared/constants.mjs";
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+
 const action = "/auth/register";
 const method = "post";
 

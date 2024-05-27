@@ -3,6 +3,7 @@ import { getPost, updatePost } from "/FED1-PE1-gydalo/scripts/api/posts/index.mj
 import { setMediaObject } from "/FED1-PE1-gydalo/scripts/handlers/createPost.mjs";
 import * as storage from "/FED1-PE1-gydalo/account/storage.mjs"
 
+// 
 
 export async function setUpdatePostFormListener () {
     const form = document.querySelector("#updatePost");

@@ -1,6 +1,7 @@
 import { API_POST_BASE } from "/FED1-PE1-gydalo/shared/constants.mjs";
 import { authFetch } from "/FED1-PE1-gydalo/shared/authFetch.mjs";
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
 const method = "delete";
 

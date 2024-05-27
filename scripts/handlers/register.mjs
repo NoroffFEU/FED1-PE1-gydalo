@@ -1,6 +1,8 @@
 
 import { register } from "/FED1-PE1-gydalo/scripts/api/auth/register.mjs";
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+
 export function setRegisterFormListener () {
     const form = document.querySelector("#registerForm");
 
@@ -11,7 +13,6 @@ export function setRegisterFormListener () {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries())
         
-            //Send to the API
             register(profile)
         });
     }

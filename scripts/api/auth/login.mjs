@@ -2,6 +2,8 @@ import { API_HOST_URL } from "/FED1-PE1-gydalo/shared/constants.mjs";
 import * as storage from "/FED1-PE1-gydalo/account/storage.mjs"
 
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+
 const action = "/auth/login";
 const method = "post";
 

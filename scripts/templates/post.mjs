@@ -10,6 +10,8 @@ import * as postMethods from "/FED1-PE1-gydalo/scripts/api/posts/index.mjs"
 export function postTemplate(postData) {
     const mediaContainer = document.createElement("div");
     mediaContainer.classList.add("media-container");
+    mediaContainer.tabIndex = 0;
+
 
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
