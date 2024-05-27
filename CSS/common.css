@@ -40,6 +40,13 @@ header img {
     width: 50px;
 }
 
+footer {
+    padding: 30px;
+    color: #fff;
+    background-color: #0A0C0E;
+}
+
+
 button {
     cursor: pointer;
 }
