@@ -32,7 +32,6 @@ if (window.location.pathname === "/FED1-PE1-gydalo/index.html") {
     mediaContainer.appendChild(media);
 
 
-
     const title = document.createElement("h2");
     title.innerText = postData.title;
 
