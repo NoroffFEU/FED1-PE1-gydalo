@@ -1,6 +1,6 @@
 
-import { getPost, updatePost } from "/FED1-PE1-gydalo/api/posts/index.mjs";
-import { setMediaObject } from "/FED1-PE1-gydalo/createPost.mjs";
+import { getPost, updatePost } from "/FED1-PE1-gydalo/scripts/api/posts/index.mjs";
+import { setMediaObject } from "/FED1-PE1-gydalo/scripts/handlers/createPost.mjs";
 import * as storage from "/FED1-PE1-gydalo/account/storage.mjs"
 
 

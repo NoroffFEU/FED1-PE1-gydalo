@@ -1,5 +1,5 @@
 
-import { login } from "/FED1-PE1-gydalo/api/auth/login.mjs";
+import { login } from "/FED1-PE1-gydalo/scripts/api/auth/login.mjs";
 
 export function setLoginFormListener () {
     const form = document.querySelector("#loginForm");

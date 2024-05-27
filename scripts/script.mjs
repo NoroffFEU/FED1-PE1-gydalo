@@ -1,10 +1,10 @@
 
 
 
-    import * as listeners from "/FED1-PE1-gydalo/handlers/index.mjs"
-    import * as templates from "/FED1-PE1-gydalo/templates/index.mjs";
-    import * as postMethods from "/FED1-PE1-gydalo/api/posts/index.mjs"
-    import { getPosts } from "/FED1-PE1-gydalo/api/posts/index.mjs";
+    import * as listeners from "/FED1-PE1-gydalo/scripts/handlers/index.mjs"
+    import * as templates from "/FED1-PE1-gydalo/scrips/templates/index.mjs";
+    import * as postMethods from "/FED1-PE1-gydalo/scripts/api/posts/index.mjs"
+    import { getPosts } from "/FED1-PE1-gydalo/scripts/api/posts/index.mjs";
 
 
 

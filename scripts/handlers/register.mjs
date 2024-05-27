@@ -1,5 +1,5 @@
 
-import { register } from "/FED1-PE1-gydalo/api/auth/register.mjs";
+import { register } from "/FED1-PE1-gydalo/scripts/api/auth/register.mjs";
 
 export function setRegisterFormListener () {
     const form = document.querySelector("#registerForm");

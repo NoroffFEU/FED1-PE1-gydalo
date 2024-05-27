@@ -1,9 +1,9 @@
 //import { API_POST_BASE } from "../../shared/constants.mjs";
 
-import { getPosts } from "/FED1-PE1-gydalo/api/posts/read.mjs";
-import { extractIdFromUrl } from "/FED1-PE1-gydalo/script.mjs"; 
-import * as templates from "/FED1-PE1-gydalo/index.mjs";
-import * as postMethods from "/FED1-PE1-gydalo/api/posts/index.mjs"
+import { getPosts } from "/FED1-PE1-gydalo/scripts/api/posts/read.mjs";
+import { extractIdFromUrl } from "/FED1-PE1-gydalo/scripts/script.mjs"; 
+import * as templates from "/FED1-PE1-gydalo/scripts/templates/index.mjs";
+import * as postMethods from "/FED1-PE1-gydalo/scripts/api/posts/index.mjs"
 
 
 

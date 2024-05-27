@@ -1,5 +1,5 @@
 
-import { createPost } from "/FED1-PE1-gydalo/api/posts/index.mjs";
+import { createPost } from "/FED1-PE1-gydalo/scripts/api/posts/index.mjs";
 
 
 export function setCreatePostFormListener () {
