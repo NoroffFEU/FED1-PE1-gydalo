@@ -2,7 +2,7 @@
 
 # HotView Labs - Project Exam Spring 2024
 
-![image](https://i.postimg.cc/QNwhhjbm/Skjermbilde-9.png)
+![image](https://i.postimg.cc/WbZj4xYv/Skjermbilde-10.png)
 
 For my project exam, I made a blogpage for a fake firm called HotView Labs. This firm is posting blogposts updating on the latest tech gear. 
 
